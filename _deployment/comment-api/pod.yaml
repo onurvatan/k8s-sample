@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: comment-api
+  labels:
+    name: comment-api
+spec:
+  containers:
+  - name: comment-api
+    image: comment-api:v1
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 80
