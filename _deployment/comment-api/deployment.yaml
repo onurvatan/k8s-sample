@@ -5,7 +5,7 @@ metadata:
   labels:
     app: comment-api
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: comment-api
@@ -52,9 +52,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  labels:
-    app: comment-api
-  name: comment-api
+  name: comment-api-svc
 spec:
   ports:
     - port: 8081
